@@ -176,7 +176,7 @@ for i in range(0, SIMULATIONITERATIONS):
 	q1, q2 = oddEvenStyle()
 	frontDoor = q1 + q2
 	boardingProcess(front = frontDoor)
-	outputFile('oddEvenTwoQueues1000.csv', i)
+	outputFile('oddEven1000.csv', i)
 
 	resetPassengers()
 	q1, q2, q3, q4 = oeSplitStyle()
