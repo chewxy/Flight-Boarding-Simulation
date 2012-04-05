@@ -157,8 +157,11 @@ def boardingProcess(**kwargs):
 			board(arg, frontDoorSeats)
 		elif door == "back":
 			board(arg, rearDoorSeats)
+		elif door == "backAll":
+			board(arg, seats.reverse())
 		else:
 			board(arg, seats)
+
 
 #main simulation - runs for a 1000 times
 for i in range(0, SIMULATIONITERATIONS):
@@ -169,13 +172,13 @@ for i in range(0, SIMULATIONITERATIONS):
 
 	resetPassengers()
 	q1, q2 = oddEvenStyle()
-	boardingProcess(front = q1, back = q2)
+	boardingProcess(frontAll = q1, backAll = q2)
 	outputFile('oddEvenTwoQueues1000.csv', i)
 
 	resetPassengers()
 	q1, q2 = oddEvenStyle()
 	frontDoor = q1 + q2
-	boardingProcess(front = frontDoor)
+	boardingProcess(frontAll = frontDoor)
 	outputFile('oddEven1000.csv', i)
 
 	resetPassengers()
