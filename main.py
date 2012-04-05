@@ -158,7 +158,7 @@ def boardingProcess(**kwargs):
 		elif door == "back":
 			board(arg, rearDoorSeats)
 		elif door == "backAll":
-			board(arg, seats.reverse())
+			board(arg, reversed(seats))
 		else:
 			board(arg, seats)
 
